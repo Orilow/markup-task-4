@@ -1,0 +1,42 @@
+.view-changer
+{
+    display: none;
+}
+
+.view-changer-img
+{
+    height: 30px;
+    width: 30px;
+    display: block; /*почему display: inline не работает?*/
+    cursor: pointer;
+}
+
+.view-changer + .view-changer-img,
+.view-changer:checked + .view-changer-img
+{
+    background-image: url(img/list-menu.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.view-changer:checked + .view-changer-img
+{
+    transform: rotate(90deg);
+}
+
+.cat-info
+{
+    width: 250px;
+    border: 1px solid gray;
+    display: inline-block;
+}
+
+/* .view-changer:not(:checked) .more-info
+{
+    display: none;
+}
+
+.view-changer:checked .more-info
+{
+    display: block;
+} */
