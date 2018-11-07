@@ -7,16 +7,16 @@
 {
     height: 30px;
     width: 30px;
-    display: block; /*почему display: inline не работает?*/
+    display: block;
     cursor: pointer;
+    background-position: center;
+    background-size: cover;
 }
 
-.view-changer + .view-changer-img,
+.view-changer:not(:checked) + .view-changer-img,
 .view-changer:checked + .view-changer-img
 {
     background-image: url(img/list-menu.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .view-changer:checked + .view-changer-img
@@ -26,17 +26,43 @@
 
 .cat-info
 {
-    width: 250px;
+    width: 300px;
+    height: 350px;
     border: 1px solid gray;
     display: inline-block;
+    margin: 20px;   
 }
 
-/* .view-changer:not(:checked) .more-info
+.cat-img
+{
+    display: block;
+    width: 100%;
+}
+
+.cat-name
+{
+    margin: 10px 0 0px 15px;
+}
+
+.cat-name > a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+.cat-info > ul
+{
+    padding: 0 0 0 15px;
+    margin: 10px 0 10px 0; 
+}
+
+.view-changer:not(:checked) ~ .cat-info > .full-info,
+.view-changer:checked ~ .cat-info > .short-info
 {
     display: none;
 }
-
-.view-changer:checked .more-info
-{
-    display: block;
-} */
