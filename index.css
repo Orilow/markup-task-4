@@ -44,6 +44,7 @@
     width: 300px;
     height: 350px;
     border: 1px solid gray;
+    border-radius: 3px;
     display: inline-block;
     margin: 20px;
 }
@@ -62,15 +63,30 @@
     text-overflow: ellipsis;
 }
 
+.cat-info:hover
+{
+    box-shadow: 0 0 30px;
+}
+
 .cat-name > a
 {
     text-decoration: none;
     color: #2d2d2d;
 }
 
+.cat-name:hover > a
+{
+    color: brown;
+}
+
 li
 {
     list-style-type: none;
+}
+
+li:hover
+{
+    font-weight: bold;
 }
 
 .cat-info > ul
